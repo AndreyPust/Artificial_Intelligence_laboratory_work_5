@@ -1,0 +1,49 @@
+[project]
+name = "ai-lab-5"
+version = "0.1.0"
+description = "Лабораторная работа ИИ 5"
+authors = [
+    {name = "Andrey",email = "pustakovandrej@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "3.12.9"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^6.0.0"
+black = "^25.1.0"
+flake8 = "^7.1.1"
+pre-commit = "^4.1.0"
+flake8-pyproject = "^1.2.3"
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 79
+lines_after_imports = 2
+
+[tool.flake8]
+exclude = [
+    ".git",
+    ".idea",
+    "doc",
+    "tests",
+    ".gitignore"
+]
+max-line-length = 120
+ignore = ["E203", "F841"]
+
+[tool.black]
+line-length = 120
+exclude = """
+.idea/
+tests/
+doc/
+"""
+
